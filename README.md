@@ -1,13 +1,11 @@
-<img src="https://raw.githubusercontent.com/ihbobul/lode/master/logo.svg?sanitize=true" alt="Logos logo" width="250" align="right">
-
 # 🏎️ Lode - ⚡ High-Performance API Load Testing 🛠️
+
+<img src="https://raw.githubusercontent.com/ihbobul/lode/master/logo.svg?sanitize=true" alt="Lode logo" width="250" align="right" style="max-width: 40vw;">
 
 Lode is an 🌍 open-source, 🚀 high-performance API 🔥 load testing 🧪 tool designed to 📏 benchmark 📊 and 🔍 analyze API ⚙️ performance efficiently. Built in 🦀 Rust, Lode provides both a 🖥️ CLI for local load testing and a 🌐 REST API (🐳 Docker container) for remote test execution, ensuring 🎯 flexibility and 🤹 ease of use.
 
----
 
 ## ✨ Features
-
 - **🖥️ CLI Interface** – Run 🏋️ tests directly from the 🏗️ command line.
 - **🌐 REST API** – Deploy a 🏗️ containerized API to handle 📡 remote load testing.
 - **🚀 High Concurrency** – Utilizes asynchronous execution with `tokio`.
@@ -15,7 +13,6 @@ Lode is an 🌍 open-source, 🚀 high-performance API 🔥 load testing 🧪 to
 - **⚙️ Configurable Tests** – Supports 🎭 custom headers, 📜 request payloads, and 🔑 authentication.
 - **❌ Robust Error Handling** – Provides 📄 structured JSON reports with 🛠️ diagnostic details.
 
----
 
 ## 📦 Installation
 
