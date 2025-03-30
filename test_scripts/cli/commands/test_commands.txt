@@ -1,0 +1,24 @@
+# Basic API endpoint test
+cargo run -p lode-cli -- --url "http://localhost:8080/api/v1/data" --requests 100 --concurrency 10 --format json --method GET
+
+# Authentication test with valid token
+cargo run -p lode-cli -- --url "http://localhost:8080/api/v1/auth" --requests 50 --concurrency 5 --format json --method GET -H 'Authorization: Bearer test-token'
+
+# Authentication test with invalid token
+cargo run -p lode-cli -- --url "http://localhost:8080/api/v1/auth" --requests 20 --concurrency 5 --format json --method GET -H 'Authorization: Invalid'
+
+# POST request with small payload
+cargo run -p lode-cli -- --url "http://localhost:8080/api/v1/process" --requests 50 --concurrency 5 --format json --method POST -H 'Content-Type: application/json' --body '{"name":"test","email":"test@example.com","data":"small"}'
+
+# Error handling tests
+# 404 Not Found
+cargo run -p lode-cli -- --url "http://localhost:8080/api/v1/error" --requests 20 --concurrency 5 --format json --method GET -H 'X-Error-Type: 404'
+
+# 429 Too Many Requests
+cargo run -p lode-cli -- --url "http://localhost:8080/api/v1/error" --requests 20 --concurrency 5 --format json --method GET -H 'X-Error-Type: 429'
+
+# 503 Service Unavailable
+cargo run -p lode-cli -- --url "http://localhost:8080/api/v1/error" --requests 20 --concurrency 5 --format json --method GET -H 'X-Error-Type: 503'
+
+# Mixed load test
+cargo run -p lode-cli -- --url "http://localhost:8080/api/v1/data" --requests 200 --concurrency 20 --format json --method POST -H 'Content-Type: application/json' -H 'Authorization: Bearer test-token' --body '{"name":"test","email":"test@example.com","data":"mixed"}' 

@@ -1,0 +1,28 @@
+[package]
+name = "lode-core"
+description = "Core functionality for the Lode testing tool"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+tokio = { workspace = true }
+reqwest = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+async-trait = { workspace = true }
+futures = { workspace = true }
+hdrhistogram = { workspace = true }
+indicatif = { workspace = true }
+uuid = { workspace = true }
+url = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+tracing-bunyan-formatter = { workspace = true }
+tracing-log = { workspace = true }
+
+chrono = "0.4"
+
+[dev-dependencies]
+wiremock = { workspace = true }

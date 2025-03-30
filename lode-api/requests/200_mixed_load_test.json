@@ -1,0 +1,12 @@
+{
+    "url": "http://localhost:8080/api/v1/process",
+    "method": "POST",
+    "requests": 200,
+    "concurrency": 20,
+    "timeout_ms": 30000,
+    "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer test-token"
+    },
+    "body": "{\"name\":\"test\",\"email\":\"test@example.com\",\"data\":\"mixed\"}"
+} 

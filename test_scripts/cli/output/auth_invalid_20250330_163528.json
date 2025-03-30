@@ -1,0 +1,42 @@
+{
+  "id": "e4b37c49-2c3a-4c88-b3ef-eab04cab6a7c",
+  "status": "completed",
+  "total_requests": 20,
+  "successful_requests": 0,
+  "failed_requests": 20,
+  "requests_per_second": 3237.5341580088257,
+  "min_response_time_ms": 0.312,
+  "max_response_time_ms": 3.9690000000000003,
+  "mean_response_time_ms": 1.137,
+  "median_response_time_ms": 0.45899999999999996,
+  "p95_response_time_ms": 3.307,
+  "p99_response_time_ms": 3.9690000000000003,
+  "total_duration_seconds": 0.006177541,
+  "error_stats": {
+    "error_counts": {
+      "HTTP 401": 20
+    },
+    "error_messages": [
+      "Unauthorized",
+      "Unauthorized",
+      "Unauthorized",
+      "Unauthorized",
+      "Unauthorized",
+      "Unauthorized",
+      "Unauthorized",
+      "Unauthorized",
+      "Unauthorized",
+      "Unauthorized",
+      "Unauthorized",
+      "Unauthorized",
+      "Unauthorized",
+      "Unauthorized",
+      "Unauthorized",
+      "Unauthorized",
+      "Unauthorized",
+      "Unauthorized",
+      "Unauthorized",
+      "Unauthorized"
+    ]
+  }
+}

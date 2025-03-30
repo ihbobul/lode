@@ -1,0 +1,42 @@
+{
+  "id": "aa1ff624-d15f-4270-b563-97615038f309",
+  "status": "completed",
+  "total_requests": 20,
+  "successful_requests": 0,
+  "failed_requests": 20,
+  "requests_per_second": 3878.7246908365514,
+  "min_response_time_ms": 0.26899999999999996,
+  "max_response_time_ms": 3.023,
+  "mean_response_time_ms": 0.9909999999999999,
+  "median_response_time_ms": 0.32,
+  "p95_response_time_ms": 2.885,
+  "p99_response_time_ms": 3.023,
+  "total_duration_seconds": 0.005156334,
+  "error_stats": {
+    "error_counts": {
+      "HTTP 503": 20
+    },
+    "error_messages": [
+      "Service Unavailable",
+      "Service Unavailable",
+      "Service Unavailable",
+      "Service Unavailable",
+      "Service Unavailable",
+      "Service Unavailable",
+      "Service Unavailable",
+      "Service Unavailable",
+      "Service Unavailable",
+      "Service Unavailable",
+      "Service Unavailable",
+      "Service Unavailable",
+      "Service Unavailable",
+      "Service Unavailable",
+      "Service Unavailable",
+      "Service Unavailable",
+      "Service Unavailable",
+      "Service Unavailable",
+      "Service Unavailable",
+      "Service Unavailable"
+    ]
+  }
+}

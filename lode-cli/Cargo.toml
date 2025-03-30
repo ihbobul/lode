@@ -1,0 +1,21 @@
+[package]
+name = "lode-cli"
+description = "CLI interface for the Lode testing tool"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+lode-core = { path = "../lode-core" }
+
+anyhow = { workspace = true }
+indicatif = { workspace = true }
+tokio = { workspace = true }
+
+clap = { version = "4.5", features = ["derive"] }
+num_cpus = "1.16"
+
+[dev-dependencies]
+assert_cmd = "2.0"
+predicates = "3.0"
+wiremock = { workspace = true }
