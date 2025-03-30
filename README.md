@@ -6,7 +6,6 @@ Lode is an open-source, high-performance API load testing tool designed to bench
 efficiently. Built in Rust, Lode provides both a CLI for local load testing and a REST API (Docker container) for remote
 test execution, ensuring flexibility and ease of use.
 
-
 <div id="toc">
   <ul align="left" style="list-style: none;">
     <summary>

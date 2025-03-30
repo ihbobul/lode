@@ -16,13 +16,11 @@ use lode_cli::Cli;
 async fn main() -> Result<()> {
     let cli = Cli::parse();
 
-    // Initialize telemetry only if --no-capture is used
     if cli.no_capture {
         let subscriber = get_stdout_subscriber("lode-cli".into(), "info".into());
         init_subscriber(subscriber);
     }
 
-    // Create progress bar
     let pb = ProgressBar::new(cli.requests as u64);
     pb.set_style(
         ProgressStyle::default_bar()
@@ -32,21 +30,18 @@ async fn main() -> Result<()> {
             .progress_chars("#>-"),
     );
 
-    // Create config
     let mut config = LoadTestConfig::new(
         cli.url,
         cli.method.parse()?,
         cli.requests as usize,
-        cli.concurrency as usize,
+        cli.concurrency,
         Duration::from_secs(cli.timeout),
     )?;
 
-    // Set body if provided
     if let Some(body) = cli.body {
         config.body = Some(body);
     }
 
-    // Parse headers if provided
     if let Some(headers) = cli.headers {
         config.headers = headers
             .iter()
@@ -60,7 +55,6 @@ async fn main() -> Result<()> {
             .collect::<Result<Vec<_>>>()?;
     }
 
-    // Create engine and run test
     let client = DefaultHttpClient::new()?;
     let engine = LoadTestEngine::new(client)?;
     let result = engine
@@ -76,10 +70,8 @@ async fn main() -> Result<()> {
         )
         .await?;
 
-    // Create report
     let report = Report::from_metrics(result).await?;
 
-    // Print results based on format
     match cli.format.to_lowercase().as_str() {
         "json" => println!("{}", report.as_json()?),
         _ => println!("{}", report.as_string()),
