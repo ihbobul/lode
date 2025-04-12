@@ -1,0 +1,11 @@
+{
+    "url": "http://localhost:8080/api/v1/error",
+    "method": "GET",
+    "requests": 20,
+    "concurrency": 5,
+    "timeout_ms": 30000,
+    "headers": {
+        "X-Error-Type": "404"
+    },
+    "body": null
+} 

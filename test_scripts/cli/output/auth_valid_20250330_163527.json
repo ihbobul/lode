@@ -1,0 +1,16 @@
+{
+  "id": "6d64ca48-7068-4121-9111-168c74c4c82d",
+  "status": "completed",
+  "total_requests": 50,
+  "successful_requests": 50,
+  "failed_requests": 0,
+  "requests_per_second": 6177.28791610057,
+  "min_response_time_ms": 0.207,
+  "max_response_time_ms": 3.763,
+  "mean_response_time_ms": 0.627,
+  "median_response_time_ms": 0.32899999999999996,
+  "p95_response_time_ms": 3.081,
+  "p99_response_time_ms": 3.763,
+  "total_duration_seconds": 0.008094167,
+  "error_stats": null
+}

@@ -1,0 +1,35 @@
+[workspace]
+resolver = "2"
+members = [
+    "lode-core",
+    "lode-cli",
+    "lode-api",
+    "lode-playground"
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Ihor Bobulych <ihorbobuly@gmail.com>"]
+description = "High-performance load testing tool for APIs"
+license = "MIT"
+repository = "https://github.com/ihbobul/lode"
+
+[workspace.dependencies]
+tokio = { version = "1.36", features = ["full"] }
+reqwest = { version = "0.12.15", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tracing = { version = "0.1", features = ["log"] }
+thiserror = "2.0.12"
+async-trait = "0.1"
+futures = "0.3"
+hdrhistogram = "7.5"
+url = "2.5"
+anyhow = "1.0"
+uuid = { version = "1.7", features = ["v4"] }
+tracing-subscriber = { version = "0.3", features = ["registry", "env-filter"] }
+tracing-bunyan-formatter = "0.3"
+tracing-log = "0.2.0"
+indicatif = "0.17"
+wiremock = "0.6.3"
